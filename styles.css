@@ -1,0 +1,95 @@
+body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Rubik Burned", sans-serif;
+  background: url("images/gohan-dragon-ball-z.gif") no-repeat center/cover;
+}
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: inherit;
+  filter: blur(10px);
+}
+
+.calendar {
+  position: relative;
+  width: 700px;
+  background-color: rgb(8, 6, 6);
+  box-sizing: border-box;
+  box-shadow: 0 5px 50px rgba(223, 13, 13, 0.5);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar-picture {
+  position: relative;
+  height: 400px;
+  padding: 20px;
+  color: #fff;
+  background: #262626 url(images/index.jpg) no-repeat center/cover;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+}
+.calendar-picture::before {
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.1));
+}
+.calendar-picture h2 {
+  margin: 0;
+}
+.calendar-picture h3 {
+  margin: 0;
+  font-weight: 500;
+}
+
+.date {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  grid-gap: 10px;
+  box-sizing: border-box;
+}
+
+.day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  font-weight: 600;
+  color: #aaf76f;
+  font-size: 25px;
+}
+.day:nth-child(7) {
+  color: rgb(240, 174, 51);
+}
+
+.number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  color: #0831b8;
+  font-size: 20px;
+}
+.number:nth-child(7n) {
+  color: rgb(240, 174, 51);
+  font-weight: 700;
+}
+.number-current, .number:hover {
+  background: url("images/7-Dragonballs-dragon-ball-z-24763783-240-240.gif") no-repeat center/cover;
+  color: rgb(107, 4, 95) !important;
+  font-weight: 700;
+  cursor: pointer;
+}/*# sourceMappingURL=styles.css.map */
